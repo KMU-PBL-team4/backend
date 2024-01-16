@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: mysqldb
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+  kmu-pbl-3-team4-backend:
+    image: 'sinam7/kmu-pbl-3-team4-backend:latest'
+    ports:
+      - '8080:8080'
+  kmu-pbl-3-team4-frontend:
+    image: 'dusehd1/front'
+    ports:
+      - '3000:3000'
