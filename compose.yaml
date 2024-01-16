@@ -7,7 +7,6 @@ services:
       MYSQL_DATABASE: mysqldb
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: root
-      MYSQL_PASSWORD: root
   kmu-pbl-3-team4-backend:
     image: 'sinam7/kmu-pbl-3-team4-backend:latest'
     ports:

@@ -1,18 +1,18 @@
 package com.example.kmupbl3.Repository;
 
 import com.example.kmupbl3.DTO.AdUpdateDTO;
-import com.example.kmupbl3.Domain.Ad;
+import com.example.kmupbl3.Domain.AD;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface AdRepository {
+public interface ADRepository {
 
-    Ad create(Ad ad);
+    AD create(AD ad);
 
-    Optional<Ad> findById(Integer id);
+    Optional<AD> findById(Integer id);
 
-    List<Ad> findAll();
+    List<AD> findAll();
 
     void update(Integer id, AdUpdateDTO dto);
 
