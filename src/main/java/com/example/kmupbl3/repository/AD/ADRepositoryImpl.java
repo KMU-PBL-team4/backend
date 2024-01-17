@@ -45,6 +45,7 @@ public class ADRepositoryImpl implements ADRepository {
 
     @Override
     public List<AD> findAll(AdSearchCond cond) {
+        log.debug("ADRepositoryImpl.findAll({})", cond);
         return query
                 .selectFrom(aD)
                 .where(
@@ -63,7 +64,7 @@ public class ADRepositoryImpl implements ADRepository {
 
     private BooleanExpression betweenAdvertiseTime(Timestamp timestamp) {
         if (timestamp != null) {
-            return aD.start_exposure.after(timestamp).and(aD.end_exposure.before(timestamp));
+            return aD.start_exposure.before(timestamp).and(aD.end_exposure.after(timestamp));
         }
         return null;
     }

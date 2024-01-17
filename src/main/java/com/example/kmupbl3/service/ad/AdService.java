@@ -4,7 +4,6 @@ import com.example.kmupbl3.AdSearchCond;
 import com.example.kmupbl3.domain.AD;
 import com.example.kmupbl3.dto.AdUpdateDTO;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,5 +18,4 @@ public interface AdService {
 
     boolean delete(Integer id);
 
-    HashMap<Integer, Integer> findAdTags(List<Integer> adIdList);
 }

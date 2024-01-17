@@ -6,13 +6,14 @@ import com.example.kmupbl3.dto.AdUpdateDTO;
 import com.example.kmupbl3.repository.AD.ADRepository;
 import com.example.kmupbl3.repository.AD.SpringDataJpaADRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @Service
 @Transactional
 @RequiredArgsConstructor
@@ -39,6 +40,7 @@ public class AdServiceImpl implements AdService {
 
     @Override
     public List<AD> findAds(AdSearchCond cond) {
+        log.debug("AdServiceImpl.findAds({})", cond);
         return adRepository.findAll(cond);
     }
 
@@ -53,9 +55,4 @@ public class AdServiceImpl implements AdService {
         else return false;
     }
 
-    // Map<Ad Id, Tag Id>
-    public HashMap<Integer, Integer> findAdTags(List<Integer> adIdList) {
-        return null;
-        // TODO
-    }
 }

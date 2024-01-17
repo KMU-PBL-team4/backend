@@ -36,7 +36,7 @@ public class UserController {
         }
     }
 
-    @GetMapping("/{id}") //todo hashtag
+    @GetMapping("/{id}")
     public String getUserInfo(@PathVariable(name = "id") Integer id) {
         UserInfoDTO userInfo = userService.findUserInfo(id);
 

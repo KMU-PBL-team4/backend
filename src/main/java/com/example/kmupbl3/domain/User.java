@@ -16,13 +16,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "username", nullable = false, unique = true)
+    private String username;
+
     @Column(name = "age", nullable = false)
     private Integer age;
 
     @Column(name = "gender", nullable = false)
     private String gender;
 
-    public User(Integer age, String gender) {
+    public User(String username, Integer age, String gender) {
+        this.username = username;
         this.age = age;
         this.gender = gender;
     }

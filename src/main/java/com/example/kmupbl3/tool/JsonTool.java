@@ -1,11 +1,14 @@
 package com.example.kmupbl3.tool;
 
+import com.example.kmupbl3.dto.AdShowDTO;
 import com.example.kmupbl3.dto.UserInfoDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
 
 @Slf4j
 public class JsonTool {
@@ -22,6 +25,10 @@ public class JsonTool {
         return getJson(response);
     }
 
+    public static String AdShowListJsonMapper(int code, String errMessage, List<AdShowDTO> dto) {
+        AdShowResponse response = new AdShowResponse(code, errMessage, dto);
+        return getJson(response);
+    }
 
 
     public static String getJson(Object from) {
@@ -54,5 +61,15 @@ public class JsonTool {
         private int status;
         private String errMessage;
         private UserInfoDTO userInfo;
+    }
+
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    static
+    class AdShowResponse {
+        private int status;
+        private String errMessage;
+        private List<AdShowDTO> adShowDTO;
     }
 }

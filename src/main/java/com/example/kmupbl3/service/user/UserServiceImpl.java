@@ -1,16 +1,12 @@
 package com.example.kmupbl3.service.user;
 
-import com.example.kmupbl3.AdSearchCond;
-import com.example.kmupbl3.domain.AD;
 import com.example.kmupbl3.domain.User;
-import com.example.kmupbl3.dto.AdUpdateDTO;
 import com.example.kmupbl3.dto.UserInfoDTO;
 import com.example.kmupbl3.repository.user.SpringDataJpaUserRepository;
-import com.example.kmupbl3.service.ad.AdService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -18,11 +14,16 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private final SpringDataJpaUserRepository jpaUserRepository;
-    private final AdService adService;
 
     @Override
     public User join(User user) {
-        return jpaUserRepository.save(user);
+        User save;
+        try {
+            save = jpaUserRepository.save(user);
+        } catch (DataIntegrityViolationException e) {
+            return null; // ex: duplicated username
+        }
+        return save;
     }
 
     @Override
@@ -60,17 +61,5 @@ public class UserServiceImpl implements UserService {
         return false;
     }
 
-    @Override
-    public List<AdUpdateDTO> selectAdForUser(Integer userId, AdSearchCond cond) {
-        UserInfoDTO userInfo = findUserInfo(userId);
-        List<AD> adList = adService.findAds(cond);
 
-//        for (AD ad : adList) {
-//
-//        }
-
-        // todo
-        return null;
-
-    }
 }

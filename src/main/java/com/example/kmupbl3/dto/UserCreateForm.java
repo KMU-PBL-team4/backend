@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
@@ -14,6 +15,9 @@ import javax.validation.constraints.Positive;
 @AllArgsConstructor
 public class UserCreateForm {
 
+    @NotBlank
+    private String username;
+
     @Positive @NotNull
     private Integer age;
 
@@ -21,6 +25,6 @@ public class UserCreateForm {
     private String gender;
 
     public static User build(UserCreateForm form) {
-        return new User(form.getAge(), form.getGender());
+        return new User(form.getUsername(), form.getAge(), form.getGender());
     }
 }
