@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-//    implementation 'org.eclipse.persistence:javax.persistence:2.2.1'
+    implementation 'javax.validation:validation-api:2.0.1.Final'
 
     // devtools
     developmentOnly 'org.springframework.boot:spring-boot-devtools'

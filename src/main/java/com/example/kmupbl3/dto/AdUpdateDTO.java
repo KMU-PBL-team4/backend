@@ -1,4 +1,4 @@
-package com.example.kmupbl3.DTO;
+package com.example.kmupbl3.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

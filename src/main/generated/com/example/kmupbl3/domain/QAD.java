@@ -1,4 +1,4 @@
-package com.example.kmupbl3.Domain;
+package com.example.kmupbl3.domain;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
@@ -15,9 +15,13 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QAD extends EntityPathBase<AD> {
 
-    private static final long serialVersionUID = -589471526L;
+    private static final long serialVersionUID = 1701527802L;
 
     public static final QAD aD = new QAD("aD");
+
+    public final StringPath category = createString("category");
+
+    public final StringPath content = createString("content");
 
     public final NumberPath<Integer> count = createNumber("count", Integer.class);
 
