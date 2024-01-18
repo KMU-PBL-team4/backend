@@ -32,7 +32,7 @@ public class DummyDataGenerator {
                 "제품1", "제품1 소개", "영상",
                 timeStringToTimestamp("2024-01-12 12:00:00"),
                 timeStringToTimestamp("2024-01-20 12:00:00"),
-                100, "제품1에 대한 설명입니다."));
+                100, "제품1에 대한 설명입니다.", "https://shop-phinf.pstatic.net/20221014_98/1665728882656rTWxX_JPEG/%EB%8C%80%ED%91%9C1.jpg?type=w860"));
         
         // 광고 태그 연결
         mapService.assignAdTags(ad1.getId(), getIdByTagName(TWENTIES));
@@ -42,7 +42,7 @@ public class DummyDataGenerator {
                 "서비스2", "서비스2 소개", "영상",
                 timeStringToTimestamp("2024-01-14 12:00:00"),
                 timeStringToTimestamp("2024-01-20 12:00:00"),
-                50, "서비스2에 대한 설명입니다."));
+                50, "서비스2에 대한 설명입니다.", "https://health.chosun.com/site/data/img_dir/2022/05/04/2022050401754_0.jpg"));
 
         mapService.assignAdTags(ad2.getId(), getIdByTagName(THIRTIES));
         mapService.assignAdTags(ad2.getId(), getIdByTagName(MALE));
@@ -51,7 +51,7 @@ public class DummyDataGenerator {
                 "이벤트3", "이벤트3 소개", "이미지",
                 timeStringToTimestamp("2024-01-16 12:00:00"),
                 timeStringToTimestamp("2024-01-20 12:00:00"),
-                200, "이벤트3에 대한 설명입니다."));
+                200, "이벤트3에 대한 설명입니다.", "https://src.hidoc.co.kr/image/lib/2021/9/3/1630652987056_0.jpg"));
 
         mapService.assignAdTags(ad3.getId(), getIdByTagName(THIRTIES));
         mapService.assignAdTags(ad3.getId(), getIdByTagName(FEMALE));
