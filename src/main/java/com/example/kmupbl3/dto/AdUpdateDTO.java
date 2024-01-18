@@ -12,9 +12,9 @@ public class AdUpdateDTO {
 
     private String shortHeading;
 
-    private Timestamp startExposure;
+    private Timestamp start_exposure;
 
-    private Timestamp endExposure;
+    private Timestamp end_exposure;
 
     private int count;
 

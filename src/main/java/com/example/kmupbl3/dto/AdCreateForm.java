@@ -25,10 +25,10 @@ public class AdCreateForm {
     private String category;
 
     @NotBlank
-    private Long startExposure;
+    private Long start_exposure;
 
     @NotBlank
-    private Long endExposure;
+    private Long end_exposure;
 
     @Positive
     private int count;
@@ -38,8 +38,8 @@ public class AdCreateForm {
     private String content;
 
     public static AD build(AdCreateForm form) {
-        Timestamp startExposure = TimeTool.convertLongToTimestamp(form.startExposure);
-        Timestamp endExposure = TimeTool.convertLongToTimestamp(form.endExposure);
+        Timestamp startExposure = TimeTool.convertLongToTimestamp(form.start_exposure);
+        Timestamp endExposure = TimeTool.convertLongToTimestamp(form.end_exposure);
         return new AD(form.title, form.shortHeading, form.category, startExposure, endExposure, form.count,
                 form.description, form.content);
     }

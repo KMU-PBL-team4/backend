@@ -15,8 +15,8 @@ public interface SpringDataJpaADRepository extends JpaRepository<AD, Integer> {
     @Query(value = "UPDATE ad " +
             "SET title = :#{#updateDTO.title}, " +
             "shortheading = :#{#updateDTO.shortHeading}, " +
-            "start_exposure = :#{#updateDTO.startExposure}, " +
-            "end_exposure = :#{#updateDTO.endExposure}, " +
+            "start_exposure = :#{#updateDTO.start_exposure}, " +
+            "end_exposure = :#{#updateDTO.end_exposure}, " +
             "count = :#{#updateDTO.count}, " +
             "description = :#{#updateDTO.description} " +
             "WHERE id = :id", nativeQuery = true)
