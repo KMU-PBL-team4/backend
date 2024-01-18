@@ -7,9 +7,13 @@ services:
       MYSQL_DATABASE: mysqldb
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: root
-      MYSQL_PASSWORD: root
   kmu-pbl-3-team4-backend:
     image: 'sinam7/kmu-pbl-3-team4-backend:latest'
+    environment:
+      SPRING_PROFILES_ACTIVE: test
+      spring:
+        datasource:
+          url: 'jdbc:mysql://localhost:3306/mysqldb?serverTimezone=UTC&characterEncoding=UTF-8'
     ports:
       - '8080:8080'
   kmu-pbl-3-team4-frontend:
