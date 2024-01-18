@@ -50,9 +50,17 @@ public class ADRepositoryImpl implements ADRepository {
                 .selectFrom(aD)
                 .where(
                         equalCategory(cond.getCategory()),
+                        containsTitle(cond.getTitle()),
                         betweenAdvertiseTime(cond.getTimestamp())
                 )
                 .fetch();
+    }
+
+    private BooleanExpression containsTitle(String title) {
+        if (StringUtils.hasText(title)) {
+            return aD.title.contains(title);
+        }
+        return null;
     }
 
     private BooleanExpression equalCategory(String category) {

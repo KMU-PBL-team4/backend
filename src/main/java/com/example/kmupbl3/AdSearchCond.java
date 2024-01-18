@@ -12,10 +12,12 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 public class AdSearchCond {
     private String category;
+    private String title;
     private Timestamp timestamp;
 
-    public AdSearchCond(String category, Long timestamp) {
+    public AdSearchCond(String category, String title, Long timestamp) {
         this.category = category;
+        this.title = title;
         this.timestamp = TimeTool.convertLongToTimestamp(timestamp);
     }
 }
