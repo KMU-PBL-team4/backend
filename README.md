@@ -7,6 +7,7 @@
 2023년 겨울방학 중 2주간 진행된 국민대학교 PBL 교육 프로젝트(w. Codestates)에서 구현하는 최종 산출물의 일부입니다.
 AD Management Platform의 Backend 부분이 되는 API Server를 구현한 Repository입니다.
 * [API Document](https://www.notion.so/b5cbae3b2d7c4db2af74add5ad36f161?v=0b1e0c8696a4442eb7fb4aa161375e5c)
+* [교육 내용 정리 문서](https://www.notion.so/sinam7/2023-PBL-w-Codestates-f800d835d05845a28286b54487bee8fb)
 
 ## Getting Started
 
