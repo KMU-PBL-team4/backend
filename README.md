@@ -1,13 +1,17 @@
 # AD Management API Server
 
 2023 겨울방학 국민대학교 PBL 교육 프로젝트 최종 산출물 中 Backend API Server
-
-## Description
-
-2023년 겨울방학 중 2주간 진행된 국민대학교 PBL 교육 프로젝트(w. Codestates)에서 구현하는 최종 산출물의 일부입니다.
-AD Management Platform의 Backend 부분이 되는 API Server를 구현한 Repository입니다.
 * [교육 내용 정리 문서](https://www.notion.so/sinam7/2023-PBL-w-Codestates-f800d835d05845a28286b54487bee8fb)
 * [API Document](https://www.notion.so/sinam7/634c2cc1a3b24752913e4f23d5c3305b?v=77a5c31c0a4f4e2ba10921ab035499d1)
+
+## Description
+|사용 화면|광고 추가|상세 정보|
+|---|---|---|
+|<img width="1184" alt="image" src="https://github.com/user-attachments/assets/d1debdc0-8514-4ea4-afe4-f3b29a22edc6" />|<img width="1184" alt="image" src="https://github.com/user-attachments/assets/b9aef11d-94d8-491c-b8bd-15f762273ac1" />|<img width="1184" alt="image" src="https://github.com/user-attachments/assets/a4086af5-c408-4d4f-a0f2-35d6de6b794e" />|
+
+2023년 겨울방학 중 2주간 진행된 국민대학교 PBL 교육 프로젝트(w. Codestates)에서 구현하는 최종 산출물의 일부입니다.
+
+AD Management Platform의 Backend 부분이 되는 API Server를 구현한 Repository입니다.
 
 
 ## Getting Started
